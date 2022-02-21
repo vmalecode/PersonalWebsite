@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" href="icons8-launch-60.png">
+</head>
+<body>
+    <div class="navbarWrapper">
+        <div class="navbarTitle">Aaron Van Der Male | Website Portfolio</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
+                <li><u></u><a href="#"><u>Blog</u></a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="main">
+            <div class="titleContainer">
+                <h1 class="title">Blog</h1>
+            </div>
+            <div class="titleContainer">
+                <div class="subtext">Aaron's comments on selected topics</div>
+            </div>
+        </div>
+        <div class="mainWrapper">
+                <div class="Subheader1">
+                    <div class="Subheader1Label">Learning OOD While Coding Chess </div>
+                    <div class="Subheader2Label">February 20, 2021</div>
+                    <div class="Subheader3Content">
+                        <p>
+                            While learning to write 
+                            <a href="https://en.wikipedia.org/wiki/SOLID" target="_blank" rel="noopener noreferrer">SOLID</a>
+                            code, a number of symptoms have presented themselves that help me realize when refactoring is required: A function call 
+                            returning information that is not needed, copying and pasting sections of similar code, or inheritance that doesn’t make sense. While programming chess,
+                            it was clear that there were several scanning methods that were required to look across the chess board, and saw this as a good opportunity to share 
+                            common methods across chess piece objects.
+                            <br>
+                            An area where I struggled, however, is in pawn movement; The asymmetric nature of pawn attack and movement is due to the fact that one color moves up the board, and another down. While I could have applied some sort of rotation vector, or control logic to modify a common method that could be applied to both black and white pieces, I opted to write separate methods for black and white pawns. However, if I revisit chess someday, I will use lessons learned to write more generic code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Global Properties */
+:root {
+    --main-bg-color: brown;
+    --primary: rgb(80, 0, 0);
+    font-family: Garamond, serif;
+    --text-color: rgba(255, 255, 255, 0.9);
+    color:var(--text-color);
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    padding: 0;
+  }
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+}
+.navbarWrapper{
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,minmax(0,auto));
+    z-index: 1;
+}
+.navbarTitle{
+    text-align: center;
+}
+.navbar > ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar > ul > li > a{
+    text-decoration: none;
+    padding: 8px 40px;
+    transition: all .1s ease;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 23px;
+}
+.navbar > ul > li >a:hover{
+    text-decoration: underline;
+}
+.NameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Name{
+    font-variant: small-caps;
+    font-size: 75px;
+}
+.mainWrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,minmax(300px,auto));
+    gap: 50px;
+    border-color: var(--b-compliment);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+}
+.Subheader1{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows:min-content;
+    font-variant: small-caps;
+    font-size: 45px;
+}
+.Subheader1Label{
+    grid-column: 1/-1;
+    border-bottom: solid;
+    border-bottom-color: var(--primary);
+    font-weight: 550;
+}
+.Subheader2Label{
+    grid-template-columns: 1/-1;
+    height: 30px;
+    font-variant:normal;
+    font-size: 20px;
+    font-weight: 900;
+    height: fit-content;
+}
+.Subheader2Right{
+    height: 30px;
+    text-align: end;
+    font-variant:normal;
+    font-size: 20px;
+}
+.Subheader3Content{
+    font-variant: normal;
+    font-size: 20px;
+    grid-column: 1/-1;
+}
+.Subheader3Content ul{
+    margin: 0;
+    text-decoration: none;
+}
+.Subheader3Content ul li a{
+    color: var(--text-color);
+}
+/* For smaller screens save room by:
+            - Eliminating margin
+            - Reducing padding
+            - Reduce name font size
+            - Single Projects column
+             */
+@media only screen and (max-width: 900px) {
+    .navbar ul{
+        margin:0;
+        padding:0;
+    }
+    .navbar ul li a{
+        flex-wrap:wrap;
+        list-style: none;
+        font-size: 20px;
+        padding:15px;
+    }
+    .Name{
+        font-size: 50px;
+    }
+    .mainWrapper{
+        margin-left: 0;
+        margin-right:0;
+    }
+    .mainWrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,minmax(0,auto));
+    }
+  }
